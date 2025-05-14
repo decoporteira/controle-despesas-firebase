@@ -15,7 +15,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/Dashboard" className=" hover:text-gray-400">
+          <Link to="/" className=" hover:text-gray-400">
             Área Protegida
           </Link>
         </li>

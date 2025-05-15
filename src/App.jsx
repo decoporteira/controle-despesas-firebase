@@ -26,8 +26,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={!user ? <Login /> : <Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={user ? <Dashboard /> : <Login />} />
+        <Route path="/signup" element={user ? <Dashboard /> : <Signup />} />
       </Routes>
     </>
   );

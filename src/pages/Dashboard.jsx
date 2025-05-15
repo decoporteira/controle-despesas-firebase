@@ -53,7 +53,6 @@ export default function Dashboard() {
         <ExpenseForm onSubmit={handleAddExpense} />
         <div>
           <h2 className="text-2xl font-bold mt-6 mb-4">Minhas Despesas</h2>
-          <p className="text-gray-500">Aqui você pode ver suas despesas.</p>
 
           <ExpenseList expenses={expenses} />
         </div>

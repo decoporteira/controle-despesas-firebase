@@ -23,8 +23,8 @@ export default function Dashboard() {
 
   const handleAddExpense = async (expense) => {
     try {
-      await saveExpense(expense);
-      setExpenses((prevExpenses) => [...prevExpenses, expense]);
+      const savedExpense = await saveExpense(expense);
+      setExpenses((prevExpenses) => [...prevExpenses, savedExpense]);
     } catch (error) {
       console.error("Error adding expense:", error);
     }
@@ -54,7 +54,12 @@ export default function Dashboard() {
         <div>
           <h2 className="text-2xl font-bold mt-6 mb-4">Minhas Despesas</h2>
 
-          <ExpenseList expenses={expenses} />
+          <ExpenseList
+            expenses={expenses}
+            onDelete={(deletedId) =>
+              setExpenses((prev) => prev.filter((e) => e.id !== deletedId))
+            }
+          />
         </div>
       </div>
     </div>

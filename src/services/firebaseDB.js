@@ -27,7 +27,6 @@ export const fetchExpenses = async () => {
 };
 
 export const deleteExpense = async (expenseId) => {
-  console.log("Deleting expense with ID:", expenseId);
   const user = auth.currentUser;
   if (!user) throw new Error("Usuário não autenticado");
 

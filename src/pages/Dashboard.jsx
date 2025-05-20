@@ -35,7 +35,6 @@ export default function Dashboard() {
     signOut(auth)
       .then(() => {
         navigate("/");
-        console.log("Signed out successfully");
       })
       .catch((error) => {});
   };

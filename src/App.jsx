@@ -23,7 +23,7 @@ function App() {
   if (loading) return <p>Carregando...</p>;
   return (
     <>
-      <Navbar />
+      <Navbar user={auth.currentUser} />
       <Routes>
         <Route path="/" element={!user ? <Login /> : <Dashboard />} />
         <Route path="/login" element={user ? <Dashboard /> : <Login />} />
